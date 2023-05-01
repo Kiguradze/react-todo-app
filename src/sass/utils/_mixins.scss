@@ -7,3 +7,20 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@mixin input {
+  width: 487px;
+  height: 76px;
+  font-size: 22px;
+  padding-left: 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e6ebff;
+  display: block;
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 22px;
+    opacity: 0.2;
+  }
+}

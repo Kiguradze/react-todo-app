@@ -1,0 +1,35 @@
+.header {
+  background-color: $color-dark;
+
+  .container {
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .user-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: #e6ebff;
+      cursor: pointer;
+    }
+  }
+}
