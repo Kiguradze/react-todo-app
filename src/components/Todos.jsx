@@ -1,54 +1,22 @@
-import doneIcon from "../assets/doneIcon.png";
-import deleteIcon from "../assets/deleteIcon.png";
+import { useState } from "react";
+import Todo from "./Todo";
 
-const Todos = () => {
+// const todos = ["Homework", "Grocery shopping", "Homework", "Grocery shopping"];
+
+const Todos = ({ todos, handleDeleteTodo }) => {
   return (
     <div className="todos">
       <ul>
-        <li>
-          Homework
-          <div className="todos-icons">
-            <div className="todosIconsBox doneIcon-box">
-              <img src={doneIcon} alt="" />
-            </div>
-            <div className="todosIconsBox deleteIcon-box">
-              <img src={deleteIcon} alt="" />
-            </div>
-          </div>
-        </li>
-        <li>
-          Grocery shopping
-          <div className="todos-icons">
-            <div className="todosIconsBox doneIcon-box">
-              <img src={doneIcon} alt="" />
-            </div>
-            <div className="todosIconsBox deleteIcon-box">
-              <img src={deleteIcon} alt="" />
-            </div>
-          </div>
-        </li>
-        <li>
-          Homework
-          <div className="todos-icons">
-            <div className="todosIconsBox doneIcon-box">
-              <img src={doneIcon} alt="" />
-            </div>
-            <div className="todosIconsBox deleteIcon-box">
-              <img src={deleteIcon} alt="" />
-            </div>
-          </div>
-        </li>
-        <li>
-          Grocery shopping
-          <div className="todos-icons">
-            <div className="todosIconsBox doneIcon-box">
-              <img src={doneIcon} alt="" />
-            </div>
-            <div className="todosIconsBox deleteIcon-box">
-              <img src={deleteIcon} alt="" />
-            </div>
-          </div>
-        </li>
+        {todos.map((todo) => {
+          return (
+            <Todo
+              key={todo.id}
+              name={todo.name}
+              id={todo.id}
+              handleDeleteTodo={handleDeleteTodo}
+            />
+          );
+        })}
       </ul>
     </div>
   );
