@@ -1,0 +1,78 @@
+.signIn {
+  @include pageLayout;
+
+  form {
+    width: 588px;
+    height: 688px;
+    text-align: center;
+    color: $color-dark;
+    background-color: $color-light;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 4px;
+  }
+
+  h1 {
+    margin-top: 33px;
+    font-size: 48px;
+  }
+
+  h5 {
+    margin-top: 44px;
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  .img {
+    margin: 10px auto 0 auto;
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background-color: #e6ebff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  label {
+    margin-top: 53px;
+    font-size: 22px;
+
+    input {
+      margin: 16px auto 0 auto;
+      width: 487px;
+      height: 76px;
+      font-size: 22px;
+      padding-left: 24px;
+      border: none;
+      border-radius: 4px;
+      background-color: #e6ebff;
+      display: block;
+      cursor: pointer;
+
+      &::placeholder {
+        font-size: 22px;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  button {
+    margin: 76px auto 0 auto;
+    width: 258px;
+    height: 66px;
+    font-size: 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5efc8d;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-dark;
+      color: $color-light;
+    }
+  }
+}
