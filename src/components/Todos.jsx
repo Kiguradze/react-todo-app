@@ -1,19 +1,16 @@
-import { useState } from "react";
 import Todo from "./Todo";
 
-// const todos = ["Homework", "Grocery shopping", "Homework", "Grocery shopping"];
-
-const Todos = ({ todos, handleDeleteTodo }) => {
+const Todos = ({ todos, handleDeleteTodo, handleUpdateTodo }) => {
   return (
     <div className="todos">
       <ul>
-        {todos.map((todo) => {
+        {todos?.map((todo) => {
           return (
             <Todo
               key={todo.id}
-              name={todo.name}
-              id={todo.id}
+              todo={todo}
               handleDeleteTodo={handleDeleteTodo}
+              handleUpdateTodo={handleUpdateTodo}
             />
           );
         })}

@@ -1,13 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
     <header className="header">
       <div className="container">
-        <h1>TO DO</h1>
+        <Link to="/">TO DO</Link>
         <div className="user">
-          <p>Your Name</p>
-          <div className="user-img"></div>
+          <p>{user.name}</p>
+          <div className="user-img">
+            <img src={user.image} alt="" />
+          </div>
         </div>
       </div>
     </header>

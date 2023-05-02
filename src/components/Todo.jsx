@@ -1,23 +1,20 @@
 import doneIcon from "../assets/doneIcon.png";
 import deleteIcon from "../assets/deleteIcon.png";
-import { useState } from "react";
 
-const Todo = ({ name, id, handleDeleteTodo }) => {
-  const [doneTask, setDoneTask] = useState(false);
-
+const Todo = ({ todo, handleDeleteTodo, handleUpdateTodo }) => {
   return (
-    <li id={id} className={doneTask ? "doneTask" : ""}>
-      {name}
-      <div className={`todos-icons ${doneTask ? "doneTask" : ""}`}>
+    <li id={todo.id} className={todo.completed ? "completed" : ""}>
+      {todo.name}
+      <div className={`todos-icons ${todo.completed ? "completed" : ""}`}>
         <div
           className="todosIconsBox doneIcon-box"
-          onClick={() => setDoneTask(!doneTask)}
+          onClick={() => handleUpdateTodo(todo.id, todo.completed)}
         >
           <img src={doneIcon} alt="" />
         </div>
         <div
           className="todosIconsBox deleteIcon-box"
-          onClick={() => handleDeleteTodo(id)}
+          onClick={() => handleDeleteTodo(todo.id)}
         >
           <img src={deleteIcon} alt="" />
         </div>

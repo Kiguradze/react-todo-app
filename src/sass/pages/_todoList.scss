@@ -4,7 +4,8 @@
 
   form {
     margin: 35px auto 0 auto;
-    width: 595px;
+    padding: 0 15px;
+    max-width: 595px;
     text-align: center;
 
     h2 {
@@ -17,6 +18,7 @@
 
     label {
       margin-top: 27px;
+      max-width: 595px;
       display: flex;
       align-items: center;
 
